@@ -1,10 +1,10 @@
 :root{
-    --accent-color:cornflowerblue;
-    --bg-color:ivory;
+    --accent-color:#0e7264;
+    --bg-color:#f1fff0;
 }
 
 body{
-    background-color: ivory;
+    background-color: var(--bg-color);
     padding: 0;
     margin: 0;
     top:0;
@@ -21,6 +21,8 @@ h1, h2, h3, h4, h5, h6{
     box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.1);
     display: flex;
     position:relative;
+    align-items: flex-start;
+    height:100%;
 }
 .sep{
     border-bottom: 1px solid rgba(255, 255, 255, 0.165);
@@ -47,6 +49,8 @@ h1, h2, h3, h4, h5, h6{
     background-color: var(--accent-color);
     border-radius: 0px 0px 30px 0px;
     color:white;
+    position: sticky;
+    top:0
 }
 .contact{
     display: flex;
@@ -56,6 +60,12 @@ h1, h2, h3, h4, h5, h6{
 .contact > a{
     text-decoration: none;
     color: white;
+    display: flex;
+}
+.contact > a > img{
+    width:21px;
+    aspect-ratio: 1;
+    filter: invert()
 }
 
 .skills{
@@ -105,54 +115,35 @@ section > p{
     border-radius: 5px;
     margin-bottom: 10px;
     transition: 1s;
-}
-.card > .background{
-    position: absolute;
-    width: 4px;
-    height: 100%;
-    top:0;
-    left:-2px;
-    border-radius: 20px;
-    background-color: red;
-    z-index: 1;
-    transition: 0.3;
-}
-.card > .background-fill{
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    border-radius: 10px;
-    top:-2px;
-}
-.card-content{
-    display: flex;
-    flex-direction: row;
-    width:100%;
+    padding:10px;
     flex-wrap: nowrap;
     align-items: flex-start;
-    z-index: 2;
-    background-color: var(--bg-color);
-    border-radius: 8px;
-    padding:10px
+    flex-direction: row;
+    justify-content: space-between;
+    border-left: 2px solid var(--accent-color);
 }
-.card-content > .details{
+
+.card > .details{
     flex: 3;
     margin-right: 20px;
 }
-.card-content > .extra{
+.card > .extra{
     flex:1;
     text-align: right;
 }
-.card-content > .details > p{
+.card > .details > p{
     font-size: smaller;
     color:rgba(0, 0, 0, 0.768);
+    margin-top: 2px;
 }
-.card-content > .extra > p{
+.card > .extra > p{
     font-size: smaller;
     color:rgba(0, 0, 0, 0.607);
+    margin-top: 2px;
 }
-.card-content > .details > h4{
+.card > .details > h4{
     margin: 0px;
 }
-.card-content > .extra > h6{
+.card > .extra > h6{
     margin: 0px;
 }
