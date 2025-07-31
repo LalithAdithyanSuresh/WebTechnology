@@ -1,0 +1,137 @@
+body{
+    width:100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    top:0;
+    left: 0;
+    background-color: azure;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    width:400px;
+    height: 500px;
+    padding: 30px;
+    border-radius: 30px;
+    display: flex;
+    background-color: rgb(182 170 243 / 17%);
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: start;
+    overflow: hidden;
+    box-shadow: 4px 4px 3px 3px rgba(54, 26, 195, 0.17), inset 1px 1px 1px 1px white;
+}
+.weather_container{
+    display: flex;
+    margin-top: 20px;
+}
+.weather_container>img{
+    width: 100px;
+    aspect-ratio: 1;
+    border-radius: 20px;
+    background-color: black;
+}
+.location_select>h2{
+    margin: 0;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;   
+}
+.location_select>h2:hover{
+    background-color: rgb(182 170 243 / 17%);
+}
+.location_select{
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+.options{
+    position: relative;
+    left:0;
+    width:350px;
+    padding: 0px 10px;
+    margin-top: 10px;
+    height: 0;
+    overflow: hidden ;
+    border-radius: 20px;
+    transition: 0.2s ease-in-out;
+    background-color: rgba(148, 191, 255, 0.318);
+}
+.options.open{
+    padding: 10px;
+    height: 420px;
+}
+.opt{
+    padding: 5px;
+    margin-bottom: 5px;
+    /* background-color: rgb(182 170 243 / 17%); */
+    border-radius: 10px;
+    cursor: pointer;
+}
+.opt:hover{
+    background-color: rgb(182 170 243 / 47%);
+}
+.weather{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+.weather > h1,h3{
+    margin: 0;
+}
+.weather > h1{
+    font-size: 50px;
+}
+.metrics{
+    width: 100%;
+    margin: 10px;
+}
+.info{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-top: 10px;
+}
+.feelsLike{
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+}
+h3{
+    font-weight: 300;
+}
+.card{
+    width: 180px;
+    padding: 10px;
+    border-radius: 20px;
+}
+.card>h2{
+    margin: 0;
+}
+.card:hover{
+    background-color: rgb(182 170 243 / 17%);
+}
+.pressure{
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid gray;
+}

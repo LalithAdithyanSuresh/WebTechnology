@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Weather APP</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <!-- LOCATION SELECT -->
+            <div class="location_select">
+                <h2 id="place" onclick="toggleOptions();">Chennai, TN</h2>
+                <div class="options" id="options">
+                    <div class="opt" onclick="selectLocation(1)">Chennai, TN</div>
+                    <div class="opt" onclick="selectLocation(2)">Madurai, TN</div>
+                    <div class="opt" onclick="selectLocation(3)">Bengaluru, KA</div>
+                </div>
+            </div>
+
+            <!-- MAIN WEATHER -->
+            <div class="weather_container">
+                <img src="hat.png" alt="weather_icon">
+                <div class="weather">
+                    <h1 id="curr_temp">32&deg; C</h1>
+                    <h3 id="curr_text">Partly Cloudy</h3>
+                </div>
+            </div>
+
+            <!-- OTHER METRICS -->
+            <div class="metrics">
+                <div class="feelsLike">
+                    <h3 style="font-weight: 300;">Feels like</h3>
+                    <h3 id="feelsLike">35deg</h3>
+                </div>
+                <div class="info">
+                    <div class="card">
+                        <h3>Humidity</h3>
+                        <h2 id="humidity">87%</h2>
+                    </div>
+                    <div class="card">
+                        <h3>Rain</h3>
+                        <h2 id="rain">21%</h2>
+                    </div>
+                    <div class="card">
+                        <h3>Wind</h3>
+                        <h2 id="wind">5 Km/h</h2>
+                    </div>
+                    <div class="card">
+                        <h3>Visibility</h3>
+                        <h2 id="visibility">28 Km</h2>
+                    </div>
+                </div>
+                <div class="pressure">
+                    <h3 style="font-weight: 300;">Pressure</h3>
+                    <h3 id="pressure">1013 Pa</h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="weatherData.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
