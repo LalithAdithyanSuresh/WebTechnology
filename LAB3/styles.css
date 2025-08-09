@@ -1,0 +1,101 @@
+:root{
+    --accent-color: cornflowerblue;
+    --bg-color: white;
+    --sec-color: rgb(227, 239, 255);
+    --error-color:#ff4444;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container{
+    width:100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-box{
+    padding: 30px;
+    border: 2px solid var(--sec-color);
+    border-radius: 30px;
+    padding-top: 100px;
+    position: relative;
+    background-color: var(--sec-color);
+}
+.userIcon{
+    position: absolute;
+    aspect-ratio: 1;
+    background-color: var(--bg-color);
+    height: 150px;
+    top:-95px;
+    border-radius: 50%;
+    overflow: hidden;
+    left: calc(50% - 75px);
+    box-shadow: 0px 0px 0px 5px var(--bg-color), inset 0px 0px 0px 2px var(--accent-color);
+}
+.userIcon > .face{
+    aspect-ratio: 1;
+    width: 50px;
+    position: absolute;
+    left: calc(50% - 25px);
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    top:30px
+}
+.userIcon> .body{
+    position: absolute;
+    aspect-ratio: 1;
+    width:100%;
+    background-color: var(--accent-color);
+    top:90px;
+    left:0%;
+    border-radius: 45%;
+}
+.form-field{
+    padding: 10px;
+    position: relative;
+    border-radius: 10px;
+    border:2px solid var(--accent-color);
+    margin-bottom: 20px;
+}
+.field-error{
+    border:2px solid var(--error-color);
+    color: var(--error-color);
+}
+label{
+    position: absolute;
+    top:-10px;
+    left: 10px;
+    background-color: var(--sec-color);
+    padding: 0px 5px;
+}
+input{
+    background: none;
+    border: none;
+    width:300px
+}
+
+input:focus{
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+.submit{
+    border-radius: 10px;
+    background-color: var(--accent-color);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+.submit:hover{
+    box-shadow: inset 0px 0px 0px 3px white;
+}
