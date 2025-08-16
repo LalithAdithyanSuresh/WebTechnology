@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lalith's Resume</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="head-strip"></div>
+
+<<<<<<< Updated upstream:index.html
+        <!-- Profile (left) -->
+        <div class="profile">
+            <h1>Lalith Adithyan S</h1>
+            <p>
+                &CenterDot; B.tech in AI & DS at Shiv Nadar University, Chennai<br>
+                &CenterDot; B.Sc in Data Science at IIT Madras
+            </p>
+
+            <div class="sep"></div>
+            
+            <!-- CONTACT DETAILS -->
+            <div class="contact">
+                <a href="mailto:lalithadithyansuresh@gmail.com">&#9993;&nbsp;&nbsp;lalithadithyansuresh@gmail.com</a>
+                <a href="tel:+918122637893">&#9742;&nbsp;&nbsp;+91 8122637893</a>
+                <a href="">&#128025;&nbsp;&nbsp;GitGub</a>
+                <a href="">&#128188;&nbsp;&nbsp;LinkedIn</a>
+            </div>
+
+            <div class="sep"></div>
+
+            <!-- SKILLS DISPLAY -->
+            <h2>SKILLS</h2>
+            <div class="skills">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Cloud Architect</span>
+                <span>Python</span>
+                <span>Server Management</span>
+                <span>Java</span>
+                <span>Frontend</span>
+                <span>Backend</span>
+                <span>APIs</span>
+=======
+            <!-- LOCATION SELECT -->
+            <div class="location_select">
+                <h2 id="place" onclick="toggleOptions();">Search City</h2>
+                <div class="options" id="options">
+                    <input name="placeSearch" id="placeSearch" placeholder="Search for city here"/>
+                    <div class="answers" id="answers">
+                    </div>
+                </div>
+            </div>
+
+            <!-- MAIN WEATHER -->   
+            <div class="weather_container">
+                <img src="assets/default.png" alt="weather_icon" id="weathericon">
+                <div class="weather">
+                    <h1 id="curr_temp">-</h1>
+                    <h3 id="curr_text">N/A</h3>
+                </div>
+            </div>
+
+            <!-- OTHER METRICS -->
+            <div class="metrics">
+                <div class="feelsLike">
+                    <h3 style="font-weight: 300;">Feels like</h3>
+                    <h3 id="feelsLike">-</h3>
+                </div>
+                <div class="info">
+                    <div class="card">
+                        <h3>Humidity</h3>
+                        <h2 id="humidity">-</h2>
+                    </div>
+                    <div class="card">
+                        <h3>Rain</h3>
+                        <h2 id="rain">-</h2>
+                    </div>
+                    <div class="card">
+                        <h3>Wind</h3>
+                        <h2 id="wind">-</h2>
+                    </div>
+                    <div class="card">
+                        <h3>Visibility</h3>
+                        <h2 id="visibility">-</h2>
+                    </div>
+                </div>
+                <div class="pressure">
+                    <h3 style="font-weight: 300;">Pressure</h3>
+                    <h3 id="pressure">-</h3>
+                </div>
+>>>>>>> Stashed changes:LAB2/index.html
+            </div>
+        </div>
+        
+        <!-- CONTENT (Right- Main) -->
+        <div class="content">
+
+            <!-- Summary -->
+            <section>
+                <h2>Summary</h2>
+                <p>This is an example summary text NEEDS TO BE MODIFIED ! This is an example summary text NEEDS TO BE MODIFIED ! This is an example summary text NEEDS TO BE MODIFIED ! This is an example summary text NEEDS TO BE MODIFIED ! This is an example summary text NEEDS TO BE MODIFIED ! This is an example summary text NEEDS TO BE MODIFIED ! This is an example summary text NEEDS TO BE MODIFIED ! This is an example summary text NEEDS TO BE MODIFIED !</p>
+            </section>
+
+            <!-- Education > Cards-->
+            <section>
+                <h2>Education</h2>
+                <div class="card">
+                    <div class="background"></div>
+                    <div class="card-content">
+                        <div class="details">
+                            <h4>Shiv Nadar University, Chennai</h4>
+                            <p>Persuing B.tech in AI&DS</p>
+                        </div>
+                        <div class="extra">
+                            <h6>CGPA:9.1</h6>
+                            <p>2023-2027</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="background"></div>
+                    <div class="card-content"  onmouseenter="CardHighlight(document.getElementsByClassName('background')[1])" onmouseout="CardDeHighlight(document.getElementsByClassName('background')[1])">
+                        <div class="details">
+                            <h4>IIT Madras</h4>
+                            <p>Persuing B.Sc in Data Science (online)</p>
+                        </div>
+                        <div class="extra">
+                            <h6>CGPA:9.6</h6>
+                            <p>2022-present</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="details">
+                        <h4>Velammal Vidyalaya, Paruthipattu</h4>
+                        <p>Completed Schooling for Higher Education 10<sup>th</sup> to 12<sup>th</sup></p>
+                    </div>
+                    <div class="extra">
+                        <h6>Boards:94.5%</h6>
+                        <p>2021-2023</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+<<<<<<< Updated upstream:index.html
+
+
+
+
+    <script src="script.js"></script>
+=======
+    <script src="getData.js"></script>
+    <script src="weatherData.js"></script>
+    <script src="scripts.js"></script>
+>>>>>>> Stashed changes:LAB2/index.html
+</body>
+</html>
