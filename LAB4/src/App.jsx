@@ -1,5 +1,6 @@
 import './App.css'
 import ListContainer from './components/ListContainer'
+
 function App() {
   const food = [
     {category:"fruits",name:"Apple",price:10,inStock:true},
@@ -11,7 +12,7 @@ function App() {
   ]
   return (
     <>
-      <ListContainer item={food}></ListContainer>
+      <ListContainer className="ListContainer" item={food}></ListContainer>
     </>
   )
 }

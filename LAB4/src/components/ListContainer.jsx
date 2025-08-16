@@ -1,21 +1,22 @@
 import List from "./list";
 import { useState } from "react";
+import styles from "../styles/ListContainer.module.css"
 function ListContainer({item}){
     const [viewStock, setViewStock] = useState(false);
 
 
     return(
         <>
-        <label>
-
-        <input
-            type="checkbox"
-            checked = {viewStock}
-            onChange={e => {setViewStock(e.target.checked)}}
+        <label style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "10px" }}>
+            <input
+                type="checkbox"
+                checked={viewStock}
+                onChange={e => setViewStock(e.target.checked)}
             />
             Show items in stock
         </label>
-        <table>
+
+        <table className={styles.table}>
             <thead>
                 <tr>
                     <td>Name</td>
