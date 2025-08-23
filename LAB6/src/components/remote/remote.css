@@ -1,0 +1,306 @@
+@import url('https://fonts.cdnfonts.com/css/lcd');
+:root{
+    --remoteBody : rgb(255, 250, 210);
+    --off-color: rgb(0, 0, 0);
+}
+                
+
+.remote{
+    padding: 1em;
+    background-color: var(--remoteBody);
+    border-radius: 1em;
+    box-shadow: 4px 4px 10px 2px black, inset 2px 2px 4px 2px rgba(255, 255, 255, 0.441);
+}
+
+.display{
+    padding: 1em;
+    border-radius: 1em;
+    background-color: rgb(57, 57, 57);
+    width: 200px;
+    height: 100px;
+    box-shadow: inset -5px -5px 20px 2px black;
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family:'LCD', sans-serif;
+}
+
+.tempDisplay{
+    position: relative;
+    font-size: 4em;
+    color: white;
+    z-index: 2;
+    pointer-events: none;
+    user-select: none;
+    text-shadow: 7px 7px black;
+}
+.tempDisplay.off{
+    color: rgba(29, 29, 29, 0);
+
+}
+.unitDisplay{
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    transform: translateY(10px);
+}
+.unitDisplay > span{
+    text-shadow: 3px 3px black;
+
+}
+.unitDisplay > span.off{
+    color: transparent;
+}
+.speedDisplay{
+    position: absolute;
+    left: 1em;
+    bottom: 0.5em;
+    display: flex;
+    scale: 0.7;
+    transform: translateX(-20px);
+
+}
+.fan{
+    width: 20px;
+    aspect-ratio: 1;
+    position: relative;
+}
+.spin{
+    animation: spin 0.5s linear 0s 1 forwards;
+    
+}
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
+.fan > span{
+    position: absolute;
+    height: 10px;
+    aspect-ratio: 0.5;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px 4px 4px 0px;
+    transform-origin: bottom left;
+}
+
+.fan > span:nth-child(1){
+    transform: rotate(90deg);
+}
+.fan > span:nth-child(2){
+    transform: rotate(180deg);
+}
+.fan > span:nth-child(3){
+    transform: rotate(270deg);
+}
+.speedValue{
+    position: relative;
+    width:50px;
+    height:20px;
+    margin-left: 4px;
+    display: flex;
+    align-items:end;
+
+}
+.fan.off > span{
+    background-color: var(--off-color);
+}
+.speedValue > span{
+    position: relative;
+    display: block;
+    content: "";
+    margin:0px 2px;
+    bottom: 3px;
+    width:10px;
+    height: 4px;
+    background-color: rgb(255, 255, 255);
+    z-index: 3;
+}
+.speedValue > span:nth-child(2){
+    height: 13px;
+}
+.speedValue > span:nth-child(3){
+    height: 20px;
+}
+.speedValue.off > span{
+    background-color: var(--off-color);
+}
+
+.controls{
+    padding: 10px;
+    position: relative;
+    margin-top: 1em;
+    /* background-color: green; */
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: inset 3px 3px 4px 2px rgba(0, 0, 0, 0.159), inset -2px -2px 4px 1px rgba(255, 255, 255, 0.174);
+}
+.IncDec{
+    color:black;
+    background-color: rgb(240, 254, 196);
+    margin: 10px;
+    display:flex;
+    flex-direction: column;
+    padding: 4px;
+    border-radius: 50px;
+    box-shadow: 3px 3px 4px 2px rgba(0, 0, 0, 0.112), inset 2px 2px 4px 2px rgba(255, 255, 255, 0.408);
+    width:40px;
+}
+.IncDec > span{
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.113),inset 2px 2px 2px 1px rgba(255, 255, 255, 0.345);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.IncDec > span:active{
+    box-shadow: inset 2px 2px 4px 1px rgba(0, 0, 0, 0.113), 2px 2px 2px 1px rgba(255, 255, 255, 0.345);
+}
+.sep{
+    border-bottom: 2px solid rgba(0, 0, 0, 0.123);
+    margin: 4px 0px;
+}
+.arrow {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent; 
+        border-bottom: 20px solid #3c3c3c;
+}
+.down{
+    border-top: 20px solid #3c3c3c;
+    border-bottom: none;
+}
+.button{
+    width:40px;
+    aspect-ratio: 1;
+    box-shadow: 3px 3px 7px 1px rgba(0, 0, 0, 0.154),inset 2px 2px 2px 1px rgba(255, 255, 255, 0.345);
+    margin: 10px;
+    display: flex;
+    background-color: rgb(240, 254, 196);
+    place-items: centre;
+    border-radius: 50%;
+    align-items: center;
+    color:rgb(31, 31, 31);
+    justify-content: center;
+    cursor: pointer;
+}
+.button:active{
+    box-shadow: inset 2px 2px 3px 0px rgba(0, 0, 0, 0.154), 2px 2px 2px 1px rgba(255, 255, 255, 0.132);
+}
+.powerIcon{
+    position: relative;
+    width:13px;
+    height:13px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    padding: 2px;
+    margin: 4px;
+    border: 3px solid rgb(58, 58, 58);
+}
+.powerStrip{
+    position: absolute;
+    width:3px;
+    height:13px;
+    background-color: rgb(58, 58, 58);
+    border:3px solid rgb(240, 254, 196);
+    left: calc(50% - 4px);
+    top:-7px;
+
+}
+.cover{
+    position: absolute;
+    background-color: rgb(236, 231, 189);
+    height:calc(100% + 30px);
+    top:0px;
+    width:calc(100% + 40px);
+    border-radius: 0.5em 0.5em 1em 1em;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: inset -3px -1px 4px 2px rgba(0, 0, 0, 0.263),inset 3px 3px 4px 2px rgba(255, 255, 255, 0.186);
+}
+.cover.open{
+    transform: translateY(100%);
+}
+.cover > span{
+    padding: 2px 1px;
+    width:40px;
+    top:10px;
+    left: calc(50% - 21px);
+    content: "";
+    border-radius: 10px;
+    box-shadow: inset 1px 1px 2px 1px rgba(0, 0, 0, 0.148), 1px 1px 2px 1px rgba(255,255,255,0.1);
+    position: absolute;
+}
+.cover > span:nth-child(2){
+    width:34px;
+    top:20px;
+    left: calc(50% - 18px);
+}
+.cover > span:nth-child(3){
+    width:27px;
+    top:30px;
+    left: calc(50% - 15px);
+}
+.signal{
+    /* background-color: red; */
+    position: absolute;
+    top:-5px;
+    right: 10px;
+    height:30px;
+    width:25px;
+    scale: 0.7;
+    /* overflow: hidden; */
+    clip-path: polygon(10% 0%, 90% 0%,60% 95%, 40% 95%);
+}
+.signal > span{
+    position: absolute;
+    aspect-ratio: 1;
+    left:calc(50% - 3px);
+    border-radius: 50%;
+    border:3px solid rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+    bottom: 3px;
+}
+
+
+.signal > span:nth-child(2){
+    width: 30px;
+    height: 30px;
+    left:calc(50% - 18px);
+    bottom: -21px;
+    background-color: transparent;
+}
+
+.signal > span:nth-child(3){
+    width: 50px;
+    height: 50px;
+    left:calc(50% - 28px);
+    bottom: -36px;
+    border:3px solid rgb(0, 0, 0);
+    background-color: transparent;
+}
+.signal.signalAnim > span{
+    animation: signalA 0.2s ease-in-out 0s 1 backwards;
+}
+@keyframes signalA {
+    0%{
+        scale:1;
+        border:3px solid rgb(0, 0, 0);
+    }
+    70%{
+        scale:1.1;
+        border:3px solid rgb(255, 255, 255);
+    }
+    100%{
+        scale: 1;
+    }
+}
